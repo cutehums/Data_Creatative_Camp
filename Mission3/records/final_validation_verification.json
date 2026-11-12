@@ -1,0 +1,14 @@
+{
+  "samples": 7748,
+  "positive_only_samples": 3640,
+  "scope": "Existing cached local validation; official supplied membership remains unverified",
+  "positive_only_macro_f1": 0.6385532655493376,
+  "full_cached_macro_f1": 0.4554556494076007,
+  "cached_forward_seconds_excluding_load": 15.438015569990966,
+  "threshold": 0.5,
+  "batch_size": 16,
+  "gpu": "NVIDIA GeForce RTX 5070",
+  "total_parameters": 110625033,
+  "active_parameters": 110625033,
+  "source_probability_path_exact_on_checked_inputs": true
+}

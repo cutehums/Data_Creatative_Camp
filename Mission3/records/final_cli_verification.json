@@ -1,0 +1,43 @@
+{
+  "checks": [
+    {
+      "device": "cuda",
+      "variant": 0,
+      "rows": 4,
+      "stdout": "{\"samples\": 4, \"batch_size\": 16, \"device\": \"cuda\", \"gpu\": \"NVIDIA GeForce RTX 5070\", \"python\": \"3.11.16\", \"torch\": \"2.8.0+cu128\", \"total_parameters\": 110625033, \"active_parameters\": 110625033, \"threshold\": 0.5, \"forward_with_tokenization_seconds\": 0.1286616370198317, \"total_seconds\": 0.876634264976019, \"seconds_per_sample\": 0.21915856624400476, \"precision\": \"CUDA FP16 autocast; CPU float32\"}\n",
+      "stderr": "",
+      "network_disabled": true,
+      "empty_hf_cache": true
+    },
+    {
+      "device": "cuda",
+      "variant": 1,
+      "rows": 4,
+      "stdout": "{\"samples\": 4, \"batch_size\": 16, \"device\": \"cuda\", \"gpu\": \"NVIDIA GeForce RTX 5070\", \"python\": \"3.11.16\", \"torch\": \"2.8.0+cu128\", \"total_parameters\": 110625033, \"active_parameters\": 110625033, \"threshold\": 0.5, \"forward_with_tokenization_seconds\": 0.1291266950138379, \"total_seconds\": 0.8780300329963211, \"seconds_per_sample\": 0.21950750824908027, \"precision\": \"CUDA FP16 autocast; CPU float32\"}\n",
+      "stderr": "",
+      "network_disabled": true,
+      "empty_hf_cache": true
+    },
+    {
+      "device": "cpu",
+      "variant": 0,
+      "rows": 4,
+      "stdout": "{\"samples\": 4, \"batch_size\": 16, \"device\": \"cpu\", \"gpu\": null, \"python\": \"3.11.16\", \"torch\": \"2.8.0+cu128\", \"total_parameters\": 110625033, \"active_parameters\": 110625033, \"threshold\": 0.5, \"forward_with_tokenization_seconds\": 0.5971922529861331, \"total_seconds\": 1.2278833089803811, \"seconds_per_sample\": 0.3069708272450953, \"precision\": \"CUDA FP16 autocast; CPU float32\"}\n",
+      "stderr": "",
+      "network_disabled": true,
+      "empty_hf_cache": true
+    },
+    {
+      "device": "cpu",
+      "variant": 1,
+      "rows": 4,
+      "stdout": "{\"samples\": 4, \"batch_size\": 16, \"device\": \"cpu\", \"gpu\": null, \"python\": \"3.11.16\", \"torch\": \"2.8.0+cu128\", \"total_parameters\": 110625033, \"active_parameters\": 110625033, \"threshold\": 0.5, \"forward_with_tokenization_seconds\": 0.5891279350034893, \"total_seconds\": 1.2172948050138075, \"seconds_per_sample\": 0.3043237012534519, \"precision\": \"CUDA FP16 autocast; CPU float32\"}\n",
+      "stderr": "",
+      "network_disabled": true,
+      "empty_hf_cache": true
+    }
+  ],
+  "forbidden_metadata_invariance": true,
+  "empty_and_long_text_handled": true,
+  "nested_directory_handled": true
+}

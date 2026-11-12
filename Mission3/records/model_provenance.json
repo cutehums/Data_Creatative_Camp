@@ -1,0 +1,38 @@
+{
+  "format": "mission3-roberta-base-weighted-bce-v1",
+  "labels": [
+    "고열",
+    "구토",
+    "두통",
+    "복통",
+    "어지러움",
+    "열상",
+    "오심",
+    "전신쇠약",
+    "호흡곤란"
+  ],
+  "threshold": 0.5,
+  "positive_loss_weights": [
+    1.0,
+    1.0,
+    1.5,
+    1.0,
+    1.0,
+    1.0,
+    2.0,
+    1.0,
+    1.0
+  ],
+  "parameters": 110625033,
+  "source_safetensors_sha256": "abda46dcd11fd62c406e57330fb01ae6ba3343077a8b5975e09f91a88ec61704",
+  "submitted_pt_sha256": "f6621239dd698a0ba1d0fd9aac7af84a0f3d098462ec11dc0f51ef88abab500f",
+  "document_best_f1": 0.638604,
+  "positive_cached_recheck_f1": 0.6385532655493376,
+  "notebook_stored_run_f1": 0.623516,
+  "document_training_count": 29200,
+  "document_validation_count": 3640,
+  "official_dataset_membership_verified": false,
+  "best_training_run_log_correspondence_verified": false,
+  "source_archive": "submission_archive/mission3_before_final_20261012T084824Z",
+  "tensor_conversion": "All source tensors copied without modification; not retrained."
+}

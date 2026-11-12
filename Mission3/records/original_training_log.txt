@@ -1,0 +1,199 @@
+
+=== Original notebook cell 12; preserved actual stored output ===
+Seed           : 2026
+Model          : klue/roberta-base
+Labels         : 9
+Max length     : 512
+Train batch    : 8
+Eval batch     : 16
+Effective batch: 16
+Learning rate  : 2e-05
+Epochs         : 8
+Threshold      : 0.5
+
+=== Original notebook cell 14; preserved actual stored output ===
+============================================================
+Existing Training CSV found.
+전처리를 수행하지 않고 기존 CSV를 사용합니다.
+============================================================
+
+============================================================
+Training Dataset
+============================================================
+Samples      : 29,200
+Label count  : 9
+Null text    : 0
+All-negative : 0
+
+Class distribution
+고열      5,186 (17.76%)
+구토      4,463 (15.28%)
+두통      2,905 ( 9.95%)
+복통      6,771 (23.19%)
+어지러움    6,334 (21.69%)
+열상      3,465 (11.87%)
+오심      3,341 (11.44%)
+전신쇠약    5,310 (18.18%)
+호흡곤란    3,927 (13.45%)
+
+=== Original notebook cell 20; preserved actual stored output ===
+============================================================
+Existing Validation CSV found.
+전처리를 수행하지 않고 기존 CSV를 사용합니다.
+============================================================
+
+============================================================
+Validation Dataset
+============================================================
+Samples      : 3,640
+Label shape  : (3640, 9)
+All-negative : 0
+
+=== Original notebook cell 24; preserved actual stored output ===
+pos_weight : tensor([1.0000, 1.0000, 1.5000, 1.0000, 1.0000, 1.0000, 2.0000, 1.0000, 1.0000],
+       device='cuda:0')
+
+=== Original notebook cell 26; preserved actual stored output ===
+[transformers] [1mRobertaForSequenceClassification LOAD REPORT[0m from: klue/roberta-base
+Key                        | Status     | 
+---------------------------+------------+-
+lm_head.bias               | UNEXPECTED | 
+lm_head.dense.bias         | UNEXPECTED | 
+lm_head.layer_norm.weight  | UNEXPECTED | 
+lm_head.layer_norm.bias    | UNEXPECTED | 
+lm_head.dense.weight       | UNEXPECTED | 
+classifier.out_proj.bias   | MISSING    | 
+classifier.dense.weight    | MISSING    | 
+classifier.dense.bias      | MISSING    | 
+classifier.out_proj.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Model              : klue/roberta-base
+Device             : cuda
+Problem type       : multi_label_classification
+Num labels         : 9
+Total parameters   : 110,625,033
+Trainable params   : 110,625,033
+Optimizer          : AdamW
+Learning rate      : 2e-05
+Weight decay       : 0.01
+Updates / epoch    : 1825
+Total train steps  : 14600
+Warmup steps       : 1460
+AMP enabled        : True
+
+=== Original notebook cell 32; preserved actual stored output ===
+============================================================
+Epoch 1/8
+============================================================
+Train Loss        : 0.372725
+Validation Loss   : 0.273144
+Macro-F1 @ 0.5    : 0.617728
+Epoch Time        : 3.49 min
+
+Per-class F1
+고열      : 0.5930
+구토      : 0.6002
+두통      : 0.5258
+복통      : 0.8050
+어지러움    : 0.6570
+열상      : 0.8701
+오심      : 0.3155
+전신쇠약    : 0.5314
+호흡곤란    : 0.6615
+
+Best model saved (Epoch 1, Macro-F1=0.617728)
+============================================================
+Epoch 2/8
+============================================================
+Train Loss        : 0.283392
+Validation Loss   : 0.264312
+Macro-F1 @ 0.5    : 0.623516
+Epoch Time        : 3.49 min
+
+Per-class F1
+고열      : 0.6697
+구토      : 0.5926
+두통      : 0.5229
+복통      : 0.8005
+어지러움    : 0.6570
+열상      : 0.8822
+오심      : 0.3699
+전신쇠약    : 0.4739
+호흡곤란    : 0.6429
+
+Best model saved (Epoch 2, Macro-F1=0.623516)
+============================================================
+Epoch 3/8
+============================================================
+Train Loss        : 0.263307
+Validation Loss   : 0.260782
+Macro-F1 @ 0.5    : 0.615396
+Epoch Time        : 3.49 min
+
+Per-class F1
+고열      : 0.6891
+구토      : 0.5311
+두통      : 0.5072
+복통      : 0.8129
+어지러움    : 0.6422
+열상      : 0.8889
+오심      : 0.3223
+전신쇠약    : 0.5332
+호흡곤란    : 0.6118
+
+No improvement (1/2)
+============================================================
+Epoch 4/8
+============================================================
+Train Loss        : 0.241326
+Validation Loss   : 0.267295
+Macro-F1 @ 0.5    : 0.619256
+Epoch Time        : 3.47 min
+
+Per-class F1
+고열      : 0.6851
+구토      : 0.5595
+두통      : 0.5224
+복통      : 0.8094
+어지러움    : 0.6486
+열상      : 0.8891
+오심      : 0.2922
+전신쇠약    : 0.5234
+호흡곤란    : 0.6437
+
+No improvement (2/2)
+
+Early stopping at Epoch 4
+
+============================================================
+Training Complete
+============================================================
+Best Epoch     : 2
+Best Macro-F1  : 0.623516
+Model saved to : /content/drive/MyDrive/DCC/models/roberta_base
+
+=== Original notebook cell 34; preserved actual stored output ===
+============================================================
+Final Validation Result
+============================================================
+Best Epoch              : 2
+Validation Loss         : 0.264312
+Macro-F1 @ 0.5          : 0.623516
+Validation Samples      : 3,640
+Validation Batch Size   : 16
+Validation Time         : 7.54 sec
+Avg Time / Sample       : 0.002071 sec
+
+Per-class F1
+고열      : 0.6697
+구토      : 0.5926
+두통      : 0.5229
+복통      : 0.8005
+어지러움    : 0.6570
+열상      : 0.8822
+오심      : 0.3699
+전신쇠약    : 0.4739
+호흡곤란    : 0.6429

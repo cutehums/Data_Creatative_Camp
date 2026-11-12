@@ -1,0 +1,10 @@
+
+$ /usr/bin/python3 -u inference.py --audio_dir /content/dcc_subset_tr29200_va3640/validation/wav --label_dir /content/dcc_subset_tr29200_va3640/validation/json --ckpt_path /content/drive/MyDrive/DCC_Mission2/runs/mission2_official_u12/mission2.ckpt --output /content/drive/MyDrive/DCC_Mission2/runs/mission2_official_u12/mission2_validation.csv --batch_size 32 --num_workers 2 --report /content/drive/MyDrive/DCC_Mission2/runs/mission2_official_u12/logs/inference_report.json
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791643704.952875   15381 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791643707.396717   15381 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1791643707.397244   15381 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+[14:48:34] 발화 목록: 통화 3,640개 / 발화 111,947개
+[14:50:43] 저장: /content/drive/MyDrive/DCC_Mission2/runs/mission2_official_u12/mission2_validation.csv (111,947행, 읽을 수 없어 1로 채운 발화 0개)
+[14:50:43] 추론 시간: 128.7s (발화당 1.15ms, 그중 모델 forward 0.55ms), batch size 32, device cuda, 모델 로드 포함 전체 134.4s

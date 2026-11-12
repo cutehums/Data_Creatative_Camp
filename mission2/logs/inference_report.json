@@ -1,0 +1,35 @@
+{
+  "utterances": 111947,
+  "unreadable_utterances": 0,
+  "batch_size": 32,
+  "num_workers": 2,
+  "device": "cuda",
+  "inference_seconds": 128.7,
+  "ms_per_utterance": 1.15,
+  "model_seconds": 61.04,
+  "model_ms_per_utterance": 0.545,
+  "total_seconds": 134.41,
+  "parameters": {
+    "total": 38070742,
+    "active": 38070742,
+    "trained": 14573614,
+    "classifier": 396806,
+    "wavlm_layers": 4,
+    "wavlm_finetuned": true
+  },
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "cpu_count": 12,
+  "python": "3.13.15",
+  "torch": "2.11.0+cu130",
+  "checkpoint_meta": {
+    "pretrained": "microsoft/wavlm-base-plus",
+    "layers": 4,
+    "seed": 42,
+    "train_calls": 28200,
+    "train_utterances": 337883,
+    "dev_calls": 1000,
+    "dev_utterances": 30356,
+    "selected": "미세조정 epoch 4",
+    "dev_accuracy": 0.920938200026354
+  }
+}

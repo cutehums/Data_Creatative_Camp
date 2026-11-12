@@ -1,0 +1,28 @@
+{
+  "mission": 2,
+  "network_disabled": true,
+  "hf_cache_empty": true,
+  "synthetic_samples": 3,
+  "rows": 6,
+  "forbidden_metadata_invariance": true,
+  "commands": [
+    {
+      "variant": 0,
+      "seconds": 2.8573312270018505,
+      "stdout": "[15:02:59] 발화 목록: 통화 3개 / 발화 6개\n[15:02:59] 저장: /tmp/dcc_offline_smoke_felu6syf/m2_0.csv (6행, 읽을 수 없어 1로 채운 발화 0개)\n[15:02:59] 추론 시간: 0.3s (발화당 52.25ms, 그중 모델 forward 51.60ms), batch size 32, device cuda, 모델 로드 포함 전체 0.7s\n",
+      "stderr": ""
+    },
+    {
+      "variant": 1,
+      "seconds": 2.8162385339965113,
+      "stdout": "[15:03:02] 발화 목록: 통화 3개 / 발화 6개\n[15:03:02] 저장: /tmp/dcc_offline_smoke_felu6syf/m2_1.csv (6행, 읽을 수 없어 1로 채운 발화 0개)\n[15:03:02] 추론 시간: 0.3s (발화당 46.01ms, 그중 모델 forward 45.38ms), batch size 32, device cuda, 모델 로드 포함 전체 0.7s\n",
+      "stderr": ""
+    }
+  ],
+  "csv_header": [
+    "audio file name",
+    "startAt",
+    "endAt",
+    "speaker"
+  ]
+}

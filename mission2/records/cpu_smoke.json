@@ -1,0 +1,35 @@
+{
+  "utterances": 1,
+  "unreadable_utterances": 0,
+  "batch_size": 32,
+  "num_workers": 0,
+  "device": "cpu",
+  "inference_seconds": 0.05,
+  "ms_per_utterance": 54.342,
+  "model_seconds": 0.05,
+  "model_ms_per_utterance": 52.931,
+  "total_seconds": 0.28,
+  "parameters": {
+    "total": 38070742,
+    "active": 38070742,
+    "trained": 14573614,
+    "classifier": 396806,
+    "wavlm_layers": 4,
+    "wavlm_finetuned": true
+  },
+  "gpu": null,
+  "cpu_count": 12,
+  "python": "3.11.16",
+  "torch": "2.8.0+cu128",
+  "checkpoint_meta": {
+    "pretrained": "microsoft/wavlm-base-plus",
+    "layers": 4,
+    "seed": 42,
+    "train_calls": 28200,
+    "train_utterances": 337883,
+    "dev_calls": 1000,
+    "dev_utterances": 30356,
+    "selected": "미세조정 epoch 4",
+    "dev_accuracy": 0.920938200026354
+  }
+}
